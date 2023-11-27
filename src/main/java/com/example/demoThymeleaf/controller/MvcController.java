@@ -34,9 +34,9 @@ public class MvcController {
     public String getPersonnes(Model model){
 
         List<Personne> personnes = new ArrayList<>();
-        personnes.add(new Personne("Marie", "Dupont", 16));
-        personnes.add(new Personne("Alain", "Delon", 16));
-        personnes.add(new Personne("JC", "Dominguez", 16));
+        //personnes.add(new Personne("Marie", "Dupont", 16));
+        //personnes.add(new Personne("Alain", "Delon", 16));
+        //personnes.add(new Personne("JC", "Dominguez", 16));
 
         model.addAttribute("personnes", personnes);
 

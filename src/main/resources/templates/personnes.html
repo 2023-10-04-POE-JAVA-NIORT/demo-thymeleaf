@@ -9,6 +9,13 @@
 
 <h2>exemple boucle</h2>
 
+<div th:switch="${ personnes.size() }">
+    <p th:case="0">La liste est vide</p>
+    <p th:case="1">La liste contient 1 personne</p>
+    <p th:case="*">La liste contient les personnes suivantes:</p>
+</div>
+
+
 <ul>
     <li th:each="p:${personnes}" th:text="${p.prenom} + ' ' + ${p.nom}"></li>
 </ul>
