@@ -6,6 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class MvcController {
 
@@ -25,5 +28,18 @@ public class MvcController {
         model.addAttribute("personne", marie);
 
         return "personne.html";
+    }
+
+    @GetMapping("personnes")
+    public String getPersonnes(Model model){
+
+        List<Personne> personnes = new ArrayList<>();
+        personnes.add(new Personne("Marie", "Dupont", 16));
+        personnes.add(new Personne("Alain", "Delon", 16));
+        personnes.add(new Personne("JC", "Dominguez", 16));
+
+        model.addAttribute("personnes", personnes);
+
+        return "personnes.html";
     }
 }
