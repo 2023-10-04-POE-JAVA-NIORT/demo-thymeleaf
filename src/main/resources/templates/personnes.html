@@ -20,5 +20,13 @@
     <li th:each="p:${personnes}" th:text="${p.prenom} + ' ' + ${p.nom}"></li>
 </ul>
 
+
+<form method="POST" action="personnes">
+    <label for="prenom">Prénom:</label><input type="text" name="prenom" id="prenom">
+    <label for="nom">Nom:</label><input type="text" name="nom" id="nom">
+
+    <input type="submit" value="Ajouter">
+</form>
+
 </body>
 </html>
